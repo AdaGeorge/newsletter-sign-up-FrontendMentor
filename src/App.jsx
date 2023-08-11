@@ -32,17 +32,17 @@ const App = () => {
         />
       ) : (
         <div className="container">
-          <div className="img-container">
+          <header className="img-container">
             <SignUpIllustration className="img" />
-          </div>
-          <div className="body">
+          </header>
+          <main className="body">
             <h1 className="title">Stay updated!</h1>
             <span>
               Join 60,000+ product managers receiving monthly updates on:
             </span>
             {options}
             <Form setOpenModal={setOpenModal} setEmail={setEmail} />
-          </div>
+          </main>
         </div>
       )}
     </div>

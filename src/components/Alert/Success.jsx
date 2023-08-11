@@ -8,7 +8,7 @@ const Success = ({ email, setOpenModal, setEmail }) => {
     setEmail("");
   };
   return (
-    <div className="success-container">
+    <article className="success-container">
       <div className="success-body">
         <IconSuccess className="icon-success" />
         <h2 className="title-success">Thanks for subscribing!</h2>
@@ -19,7 +19,7 @@ const Success = ({ email, setOpenModal, setEmail }) => {
         </p>
       </div>
       <Button onClick={dismissHandler}>Dismiss message</Button>
-    </div>
+    </article>
   );
 };
 
