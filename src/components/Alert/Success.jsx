@@ -1,5 +1,6 @@
 import { ReactComponent as IconSuccess } from "../../assets/images/icon-success.svg";
 import Button from "../Button/Button";
+import "./success.scss";
 
 const Success = ({ email, setOpenModal, setEmail }) => {
   const dismissHandler = () => {
@@ -7,14 +8,16 @@ const Success = ({ email, setOpenModal, setEmail }) => {
     setEmail("");
   };
   return (
-    <div className="Success">
-      <IconSuccess className="icon-success" />
-      <h2 className="title-succes">Thanks for subscribing!</h2>
-      <p>
-        {" "}
-        A confirmation email has been sent to <span>{email}</span>. Please open
-        it and click the button inside to confirm your subscription.
-      </p>
+    <div className="success-container">
+      <div className="success-body">
+        <IconSuccess className="icon-success" />
+        <h2 className="title-success">Thanks for subscribing!</h2>
+        <p className="text-success">
+          {" "}
+          A confirmation email has been sent to <span>{email}</span>. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
       <Button onClick={dismissHandler}>Dismiss message</Button>
     </div>
   );
