@@ -3,13 +3,14 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import "./form.sass";
+import { emailRegex } from "../../utils/regex";
 
 const Form = ({ setOpenModal, setEmail }) => {
   const [error, setError] = useState(false);
 
   const submit = (event) => {
     event.preventDefault();
-    if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(event.target[0].value)) {
+    if (emailRegex.test(event.target[0].value)) {
       setError(false);
       setEmail(event.target[0].value);
       setOpenModal(true);
